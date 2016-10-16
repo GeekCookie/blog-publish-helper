@@ -8,4 +8,5 @@ public class Token {
     public String refresh_token;
     public String token_type;
     public long expires_in;
+    public long curTimes;
 }
