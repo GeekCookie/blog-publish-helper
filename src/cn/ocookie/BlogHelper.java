@@ -82,6 +82,8 @@ public class BlogHelper {
                             // success
                             if (postsResponse != null && postsResponse.body() != null) {
                                 System.out.println(gson.toJson(postsResponse.body()));
+                            } else {
+                                System.out.println(gson.toJson(postsResponse.raw()));
                             }
                         }
 

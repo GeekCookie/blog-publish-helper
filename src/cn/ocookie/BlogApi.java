@@ -1,7 +1,5 @@
 package cn.ocookie;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -24,7 +22,7 @@ public class BlogApi {
     static {
         OkHttpClient.Builder client = new OkHttpClient.Builder();
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-        interceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
+        interceptor.setLevel(HttpLoggingInterceptor.Level.NONE);
 
         client.interceptors().add(new Interceptor() {
             @Override
