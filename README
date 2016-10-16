@@ -1,0 +1,16 @@
+ ## README
+ To complete for publishing content to the ghost blog system, 2 steps is necessary.
+ ### 1、 Request for creating slug
+ eg. get 'Your host'/ghost/api/v0.1/slugs/post/'your slug'/
+
+ ### 2、 Request for creating blog.
+ eg. post 'Your host'/ghost/api/v0.1/posts/?include=tags
+           body:{"posts":[{"title":"your title","slug":"the last creating slug","markdown":"your content","image":null,"featured":false,"page":false,"status":"published","language":"en_US","meta_title":null,"meta_description":null,"author":"1","publishedBy":null,"tags":[]}]}
+
+ Pass the previous 2 steps , a new blog can be published to your ghost blog system.
+
+ It is concerned that the previous http request header must be authorized. To be authorized successfully,
+ you need to set the key-value for “Authorization” in the header.
+
+
+
