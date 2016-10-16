@@ -26,15 +26,20 @@ public class BlogHelper {
 
     public static void main(String[] args) {
         // write your code here
-        final String slug = "机器人发布测试" + System.currentTimeMillis();
+        final String slug = "iii" + System.currentTimeMillis();
         final BlogHelper helper = new BlogHelper();
 
         final Posts posts = new Posts();
         Posts.Post post = new Posts.Post();
         post.setTitle(slug);
         post.setSlug(slug);
-        post.setMarkdown("机器人发布测试,这是机器人的测试");
+        post.setMarkdown(",nkjkj");
+        post.setAuthor("1");
+        post.setPage(false);
+        post.setFeatured(false);
         post.setStatus("published");
+        post.setPublished_by("null");
+        post.setLanguage("en_US");
         ArrayList<Posts.Post> posts1 = new ArrayList<Posts.Post>();
         posts1.add(post);
         posts.setPosts(posts1);
@@ -76,6 +81,7 @@ public class BlogHelper {
             public void onResponse(Call<Slug> slugCall, Response<Slug> slugResponse) {
                 if (slugResponse != null && slugResponse.isSuccessful()) {
                     System.out.println("create slug success");
+                    System.out.println(slugResponse.message());
                     BlogApi.getService().publishBlog(new Gson().toJson(posts)).enqueue(new Callback<Posts>() {
                         @Override
                         public void onResponse(Call<Posts> postsCall, Response<Posts> postsResponse) {
@@ -83,7 +89,7 @@ public class BlogHelper {
                             if (postsResponse != null && postsResponse.body() != null) {
                                 System.out.println(gson.toJson(postsResponse.body()));
                             } else {
-                                System.out.println(gson.toJson(postsResponse.raw()));
+                                System.out.println(gson.toJson(postsResponse.message()));
                             }
                         }
 

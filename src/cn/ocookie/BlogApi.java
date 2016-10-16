@@ -30,7 +30,7 @@ public class BlogApi {
                 String url = chain.request().url().encodedPath();
                 Request.Builder request = chain.request()
                         .newBuilder()
-                        .addHeader("Content-Type", "application/x-www-form-urlencoded")
+                        .addHeader("Content-Type", "application/json")
                         .addHeader("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36");
 
                 if (!url.contains("/ghost/api/v0.1/authentication/token") &&

@@ -27,7 +27,7 @@ public class Posts {
         private String meta_title;
         private String meta_description;
         private String author;
-        private String published_by;
+        private String publishedBy;
         private List<String> tags;
 
         public String getTitle() {
@@ -119,11 +119,11 @@ public class Posts {
         }
 
         public String getPublished_by() {
-            return published_by;
+            return publishedBy;
         }
 
-        public void setPublished_by(String published_by) {
-            this.published_by = published_by;
+        public void setPublished_by(String publishedBy) {
+            this.publishedBy = publishedBy;
         }
 
         public List<String> getTags() {
