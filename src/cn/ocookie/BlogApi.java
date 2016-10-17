@@ -22,7 +22,7 @@ public class BlogApi {
     static {
         OkHttpClient.Builder client = new OkHttpClient.Builder();
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
-        interceptor.setLevel(HttpLoggingInterceptor.Level.NONE);
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 
         client.interceptors().add(new Interceptor() {
             @Override

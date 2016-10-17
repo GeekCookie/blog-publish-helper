@@ -22,6 +22,6 @@ public interface ApiService {
     Call<Slug> createSlug(@Path("slug") String slug);
 
     @POST("/ghost/api/v0.1/posts/?include=tags")
-    Call<Posts> publishBlog(@Body String body);
+    Call<Posts> publishBlog(@Body Posts posts);
 
 }
