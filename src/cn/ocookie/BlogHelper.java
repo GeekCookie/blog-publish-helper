@@ -44,7 +44,7 @@ public class BlogHelper {
         posts1.add(post);
         posts.setPosts(posts1);
 
-        helper.login("zhibt_com@163.com", "domybest1", new Callback<Token>() {
+        helper.login("", "", new Callback<Token>() {
             @Override
             public void onResponse(Call<Token> tokenCall, Response<Token> tokenResponse) {
                 if (tokenResponse != null && tokenResponse.body() != null) {
